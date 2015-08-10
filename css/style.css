@@ -117,12 +117,7 @@ h1, .h1, h2, .h2, h3, .h3 {
   transition: all .3s ease-in-out; }
 
 .img-animated:hover {
-  -webkit-clip-path: circle(60px at center);
-  -webkit-transform: scale(1.5);
-  -moz-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  -o-transform: scale(1.5);
-  transform: scale(1.5); }
+  -webkit-clip-path: circle(60px at center); }
 
 footer.footer {
   background: #C8C8C8;
