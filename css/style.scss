@@ -26,8 +26,11 @@ $desktop-width: 1024px;
 
 $font-stack:    'Freight Sans', sans-serif;
 $p-color: #6a7180;
-$p-font-size: 19px;
-$p-line-ht: 2.8rem;
+$p-font-size: 2.2rem;
+$p-line-ht: 30px;
+
+$h1-font-size: 3.6rem;
+$h1-line-ht: 44px;
 
 $header-color: #141823;
 $header-color-2: #9197a3;
@@ -40,6 +43,10 @@ html{
 }
 body{
   font-family: $font-stack;
+}
+h1{
+  font-size: $h1-font-size;
+  line-height: $h1-line-ht;
 }
 h2 {
   font-size: 2.0rem;
@@ -70,6 +77,14 @@ h1, .h1, h2, .h2, h3, .h3{
   margin-top: 0px;
   margin-bottom: 20px;
 }
+.padding-top-20 {padding-bottom:20px}
+.padding-top-40 {padding-bottom:40px}
+.padding-top-60 {padding-bottom:50px}
+
+.padding-bottom-20 {padding-bottom:20px}
+.padding-bottom-40 {padding-bottom:40px}
+.padding-bottom-60 {padding-bottom:50px}
+
 
 .nav {
   font-size: 1rem;
@@ -216,6 +231,21 @@ h1, .h1, h2, .h2, h3, .h3{
   -o-transform: scale(1.5) rotate(7deg);
   transform: scale(1.5) rotate(7deg);
 
+}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 70%;
+  margin: auto;
+}
+.carousel-control.left,
+.carousel-control.right{
+  background-image: none;
+}
+.carousel-indicators li {
+  border: 1px solid rgba(255,255,255,1);
+}
+.carousel-indicators .active {
+  background:rgba(0,0,0,0.15);
 }
 footer.footer {
   background: $footer-color;
