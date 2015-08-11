@@ -1,28 +1,31 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,700);
 @import url(../fonts/freight-sans.css);
+html {
+  font-size: 62.5%; }
+
 body {
   font-family: "Freight Sans", sans-serif; }
 
 h2 {
-  font-size: 20px;
+  font-size: 2.0rem;
   line-height: 28px;
   color: #9197a3; }
 
 h3 {
-  font-size: 32px;
+  font-size: 3.2rem;
   line-height: 40px;
   text-transform: capitalize; }
 
 h4 {
   color: #373e4d;
-  font-size: 28px;
+  font-size: 2.8rem;
   line-height: 40px;
   margin-bottom: 9px; }
 
 p {
   color: #6a7180;
   font-size: 19px;
-  line-height: 28px; }
+  line-height: 2.8rem; }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Freight Sans", sans-serif; }
@@ -77,14 +80,10 @@ h1, .h1, h2, .h2, h3, .h3 {
 
 .main.container {
   max-width: 940px; }
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .main.container #top p {
-      padding-left: 80px;
-      padding-right: 80px; } }
   @media (min-width: 1024px) {
     .main.container #top p {
-      padding-left: 180px;
-      padding-right: 180px; } }
+      padding-left: 90px;
+      padding-right: 90px; } }
   .main.container #apps p {
     padding-left: 0;
     padding-right: 0; }
@@ -114,10 +113,23 @@ h1, .h1, h2, .h2, h3, .h3 {
   -moz-transition: all .3s ease-in-out;
   -ms-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out; }
+  transition: all .3s ease-in-out;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2); }
+
+.img-animated-container {
+  overflow: hidden; }
 
 .img-animated:hover {
-  -webkit-clip-path: circle(60px at center); }
+  -webkit-clip-path: circle(100px at center);
+  -webkit-transform: scale(1.5) rotate(7deg);
+  -moz-transform: scale(1.5) rotate(7deg);
+  -ms-transform: scale(1.5) rotate(7deg);
+  -o-transform: scale(1.5) rotate(7deg);
+  transform: scale(1.5) rotate(7deg); }
 
 footer.footer {
   background: #C8C8C8;

@@ -27,7 +27,7 @@ $desktop-width: 1024px;
 $font-stack:    'Freight Sans', sans-serif;
 $p-color: #6a7180;
 $p-font-size: 19px;
-$p-line-ht: 28px;
+$p-line-ht: 2.8rem;
 
 $header-color: #141823;
 $header-color-2: #9197a3;
@@ -35,23 +35,25 @@ $hero-height: 300px;
 
 $footer-color:#C8C8C8;
 
-html{}
+html{
+  font-size: 62.5%;
+}
 body{
   font-family: $font-stack;
 }
 h2 {
-  font-size: 20px;
+  font-size: 2.0rem;
   line-height: 28px;
   color: $header-color-2;
 }
 h3 {
-  font-size: 32px;
+  font-size: 3.2rem;
   line-height: 40px;
   text-transform: capitalize;
 }
 h4 {
   color: #373e4d;
-  font-size: 28px;
+  font-size: 2.8rem;
   line-height: 40px;
   margin-bottom: 9px;
 }
@@ -132,13 +134,14 @@ h1, .h1, h2, .h2, h3, .h3{
 
       }
       @include tablet {
-        padding-left: 80px;
-        padding-right: 80px;
+        //padding-left: 80px;
+        //padding-right: 80px;
       }
       @include desktop {
-        padding-left: 180px;
-        padding-right: 180px;
+        padding-left: 90px;
+        padding-right: 90px;
       }
+
     }
   }
   #paid-media {
@@ -186,14 +189,23 @@ h1, .h1, h2, .h2, h3, .h3{
   -ms-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.img-animated-container {
+  overflow: hidden;
 }
 .img-animated:hover{
-  -webkit-clip-path: circle(60px at center);
-  //-webkit-transform: scale(1.5);
-  //-moz-transform: scale(1.5);
-  //-ms-transform: scale(1.5);
-  //-o-transform: scale(1.5);
-  //transform: scale(1.5);
+  -webkit-clip-path: circle(100px at center );
+  -webkit-transform: scale(1.5) rotate(7deg);
+  -moz-transform: scale(1.5) rotate(7deg);
+  -ms-transform: scale(1.5) rotate(7deg);
+  -o-transform: scale(1.5) rotate(7deg);
+  transform: scale(1.5) rotate(7deg);
+
 }
 footer.footer {
   background: $footer-color;
