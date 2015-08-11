@@ -173,9 +173,9 @@ h1, .h1, h2, .h2, h3, .h3{
 
   }
   #apps {
-    p {
-      padding-left: 0;
-      padding-right: 0;
+    p{
+      padding-left: 80px;
+      padding-right: 80px;
     }
   }
   .main .row {
@@ -191,8 +191,8 @@ h1, .h1, h2, .h2, h3, .h3{
       padding-left: 0;
       padding-right: 0;
       color: #6a7180;
-      font-size: 17px;
-      line-height: 26px;
+      font-size: $p-font-size;
+      line-height: $p-line-ht;
     }
   }
   .main div.row {
@@ -234,7 +234,7 @@ h1, .h1, h2, .h2, h3, .h3{
 }
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-  width: 70%;
+  width: 100%;
   margin: auto;
 }
 .carousel-control.left,

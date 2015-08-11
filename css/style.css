@@ -118,8 +118,8 @@ h1, .h1, h2, .h2, h3, .h3 {
       padding-left: 90px;
       padding-right: 90px; } }
   .main.container #apps p {
-    padding-left: 0;
-    padding-right: 0; }
+    padding-left: 80px;
+    padding-right: 80px; }
   .main.container .main .row {
     padding: 0;
     margin: 0; }
@@ -129,8 +129,8 @@ h1, .h1, h2, .h2, h3, .h3 {
       padding-left: 0;
       padding-right: 0;
       color: #6a7180;
-      font-size: 17px;
-      line-height: 26px; }
+      font-size: 2.2rem;
+      line-height: 30px; }
   .main.container .main div.row {
     padding: 20px 0 20px 0; }
   .main.container .float-left {
@@ -166,7 +166,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-  width: 70%;
+  width: 100%;
   margin: auto; }
 
 .carousel-control.left,
