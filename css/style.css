@@ -179,6 +179,9 @@ h1, .h1, h2, .h2, h3, .h3 {
 .carousel-indicators .active {
   background: rgba(0, 0, 0, 0.15); }
 
+blockquote {
+  margin-left: 12%; }
+
 footer.footer {
   background: #C8C8C8;
   color: white;
