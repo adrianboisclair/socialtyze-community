@@ -72,6 +72,16 @@ h1, .h1, h2, .h2, h3, .h3{
 }
 
 .nav {
+  font-size: 1rem;
+  @include mobile {
+    font-size: 1.2rem;
+  }
+  @include tablet {
+    font-size: 1.4rem;
+  }
+  @include desktop {
+    font-size: 1.4rem;
+  }
   ul {
     padding-left: 15px;
     li {
