@@ -19,7 +19,7 @@
             line-height: 30px;
             overflow-x: hidden;
         }
-        .main.container p {
+        p {
             color: #555;
             font-family: 'Open Sans', serif;
             font-size: 26px;
@@ -30,10 +30,19 @@
         a:hover {
             text-decoration: none;
         }
+        h1 {
+            font-family: 'Open Sans', serif;
+            font-size: 64px;
+            letter-spacing: 3px;
+            font-weight: 300 !important;
+            line-height: 80px;
+            color: #FFFFFF;
+        }
         h3 {
             text-transform: capitalize;
             color: #FFCB00;
             font-size: 46px;
+            line-height: 150%;
         }
         .sm-container {
             max-width: 1000px;
@@ -54,15 +63,12 @@
         .padding-top-60 {
             padding-top: 50px
         }
-
         .padding-bottom-20 {
             padding-bottom: 20px
         }
-
         .padding-bottom-40 {
             padding-bottom: 40px
         }
-
         .padding-bottom-60 {
             padding-bottom: 50px
         }
@@ -150,14 +156,6 @@
         .logo-container {
             padding-top: 135px;
         }
-        .logo-container h1 {
-            font-family: 'Open Sans', serif;
-            font-size: 64px;
-            letter-spacing: 3px;
-            font-weight: 300 !important;
-            line-height: 80px;
-            color: #FFFFFF;
-        }
         .hr-sm-180 {
             width: 180px;
             margin: 1px 0 0;
@@ -178,20 +176,9 @@
             padding-top: 0px;
             margin-top: -4px;
         }
-
-
-
-        .case-content .wrapper p:nth-child(2) {
-            padding-bottom: 30px;
-        }
-
         .center-block {
             margin-top: 20px;
             margin-bottom: 10px;
-        }
-
-        .results p {
-            text-align: justify;
         }
         .footer-main {
             background-color: #282828;
@@ -281,7 +268,8 @@
             transition: .2s all ease-in-out;
         }
         a, a:hover {
-            color: #1e73be			-moz-transition: all 0.2s ease-in-out;
+            color: #1e73be;
+            -moz-transition: all 0.2s ease-in-out;
             -o-transition: all 0.2s ease-in-out;
             -webkit-transition: all 0.2s ease-in-out;
             transition: all 0.2s ease-in-out;
@@ -294,7 +282,6 @@
         #top .row .col-sm-12:last-child {
             margin-bottom: 20px;
         }
-
         /*media queries*/
         /* Custom, iPhone Retina */
         @media only screen and (min-width : 320px) {
@@ -303,15 +290,6 @@
         /* Extra Small Devices, Phones */
         @media only screen and (min-width : 480px) {
             .center-block {padding: 0;}
-        }
-        /* Medium Devices, Desktops */
-        @media only screen and (max-width : 900px) {
-
-
-        }
-        /* Large Devices, Wide Screens */
-        @media only screen and (max-width : 1500px) {
-
         }
         @media only screen and (max-width : 1540px) {
             .res-wrapper {
@@ -395,8 +373,6 @@
         </div><!--row-->
     </div><!--container-fluid-->
 </header><!--header-main-->
-<!--
--->
 <!--Begin Case Study Content -->
 <div class="container-fluid">
     <div class="row hero-header">
@@ -426,7 +402,7 @@
                 <!--<h2 class="text-center">Our Strategy</h2>-->
                 <h3 class="text-center">community</h3>
                 <p class="text-center">Our content strategy for CPK’s social channels (Facebook, Instagram and Twitter) was centered on the types of content specific audiences respond well to on each platform. The food photography was upgraded, tone was identified, and we also introduced a ‘Lifestyle’ element.</p>
-                <img src="img/cpk/CommunityCPK.png" class="center-block img-responsive" style="margin-bottom: 30px;"/>
+                <img src="img/cpk/CommunityCPK.png" class=" img-responsive"/>
             </div><!-- col-sm-12 -->
         </div><!--  row -->
     </div><!-- #top -->
@@ -435,7 +411,7 @@
         <div class="col-sm-12">
             <h3 class="text-center">Facebook Paid Media</h3>
             <p class="text-center padding-bottom-60"> We have supported various campaigns with strategic paid media to build on CPK’s existing fanbase, including app installs, email acquisition and general awareness. One of our most successful campaigns was in support of CPK’s Game On promotion, which runs just before March Madness. All of CPK’s items are pitted against one another until one winner is crowned the fan favorite (Butter Cake, in case you’re wondering). Our paid media significantly extended the reach and engagement for the campaign.</p>
-            <img src="img/cpk/CPKFacebookAds.png" class="center-block img-responsive padding-top-20 padding-bottom-20" style="margin-bottom: 40px;"/>
+            <img src="img/cpk/CPKFacebookAds.png" class=" img-responsive padding-bottom-40"/>
         </div><!-- col-sm-12 -->
     </div><!-- #paid-media -->
     <hr/>
@@ -479,7 +455,7 @@
     </div><!-- row -->
     <div class="row">
         <div class="col-sm-12">
-            <img src="img/cpk/DearMomFinalEdit.png" class="img-responsive center-block padding-top-20"/>
+            <img src="img/cpk/DearMomFinalEdit.png" class="img-responsive padding-top-20"/>
         </div><!-- col-sm-12 -->
     </div><!-- row -->
 </div><!--Main Container-->
@@ -511,7 +487,7 @@
         <li><a data-listid="j/AC/B9F/F14/B84ECC146E39B18E" class="createsend-button button button-c">Newsletter Signup</a></li>
     </ul>
 </footer>
-<script>
+<script async>
     var header, logo, yPos, windowWidth, link;
     function yScroll() {
         header = document.getElementById('header');
@@ -523,7 +499,6 @@
             header.style.height = "64px";
             header.style.paddingTop = "10px";
             header.style.paddingBottom = "30px";
-//            header.style.backgroundColor = "rgba(0,0,0,.8)";
             header.style.backgroundColor = "transparent";
             for( var i = 0; i < link.length; i++) {
                 link[i].style.paddingTop = "10px";
@@ -534,7 +509,6 @@
                 header.style.paddingBottom = "40px";
                 logo[0].style.width = "140px";
                 logo[0].style.marginTop = "10px";
-
                 for( var i = 0; i < link.length; i++) {
                     link[i].style.paddingTop = "0px";
                     link[i].style.fontSize = "12px";
@@ -555,13 +529,12 @@
                     link[i].style.fontSize = "14px";
                     link[i].style.paddingTop = "0px";
                 }
-
             }
         }
     }
     window.addEventListener("scroll", yScroll);
 </script>
-<script src="js/widowtamer.js"></script>
+<script src="js/widowtamer.js" async></script>
 <script>
     wt.fix({
         elements: 'p',
