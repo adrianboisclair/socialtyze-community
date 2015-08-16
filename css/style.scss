@@ -205,7 +205,7 @@ h1, .h1, h2, .h2, h3, .h3{
   }
 }
 .img-animated{
-  -webkit-clip-path: circle(0px at center);
+  -webkit-clip-path: rect(40px, 40px, 40px, 40px);
   -webkit-transition: all .5s ease-out;
   -moz-transition: all .5s ease-out;
   -ms-transition: all .5s ease-out;
@@ -221,12 +221,12 @@ h1, .h1, h2, .h2, h3, .h3{
   overflow: hidden;
 }
 .img-animated:hover{
-  -webkit-clip-path: circle(180px at center );
-  -webkit-transform: scale(1.5) rotate(15deg);
-  -moz-transform: scale(1.5) rotate(15deg);
-  -ms-transform: scale(1.5) rotate(15deg);
-  -o-transform: scale(1.5) rotate(15deg);
-  transform: scale(1.5) rotate(15deg);
+  //-webkit-clip-path: circle(180px at center );
+  //-webkit-transform: scale(1.5) rotate(15deg);
+  //-moz-transform: scale(1.5) rotate(15deg);
+  //-ms-transform: scale(1.5) rotate(15deg);
+  //-o-transform: scale(1.5) rotate(15deg);
+  //transform: scale(1.5) rotate(15deg);
 
 }
 .carousel-inner > .item > img,
