@@ -1,3 +1,4 @@
+<!--CSS and JS inline for development-->
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -12,24 +13,36 @@
         @import url(https://fonts.googleapis.com/css?family=Open+Sans:700);
         body {
             background-color: white;
-            font-family: 'Open Sans', sans-serif;
-            overflow-x: hidden;
             color: #6a7180;
+            font-family: 'Open Sans', sans-serif;
             font-size: 2.2rem;
             line-height: 30px;
+            overflow-x: hidden;
         }
         .main.container p {
             color: #555;
             font-family: 'Open Sans', serif;
-            font-weight: 300;
-            padding-top: 20px;
             font-size: 26px;
+            font-weight: 300;
             line-height: 38px;
+            padding-top: 20px;
         }
         a:hover {
             text-decoration: none;
         }
-        h3 {color:#000000;}
+        h3 {
+            text-transform: capitalize;
+            color: #FFCB00;
+            font-size: 46px;
+        }
+        .sm-container {
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hidden {
+            display: none;
+        }
         .inline-block li {
             display: inline-block;
         }
@@ -39,12 +52,11 @@
             margin-right: auto;
         }
         .header-main {
+            margin: 0;
+            padding-top: 40px;
             position: absolute;
             width: 100%;
             z-index: 999;
-            /*text-align: right;*/
-            padding-top: 40px;
-            margin: 0;
         }
         .header-main-nav {
             display: -webkit-box;
@@ -59,45 +71,43 @@
         }
         .header-main-nav li {
             padding-left: 20px;
-            padding-rightt: 20px;
+            padding-right: 20px;
         }
         .header-main-nav {
             font-family: "Open Sans", sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 2px;
             margin-top: 15px;
             padding: 0;
-            font-size: 14px;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 300;
         }
         .header-main-nav li {
             padding-left: 38px;
         }
         .header-main-nav a {
             color: #fff;
-            text-decoration: none;
             display: inline-block;
             padding: 5px 10px;
+            text-decoration: none;
         }
         .header-main .row {
             margin-top: -15px;
         }
         .hero-header {
-            background: url(https://s3-us-west-1.amazonaws.com/communityproject/img/cpk_photo_002.jpg) center center;
-            height: 66vh !important;
-            min-height: 556px;
+            background: url(https://s3-us-west-1.amazonaws.com/communityproject/img/cpk_photo_002.jpg) no-repeat center center;
             -webkit-background-size: cover;
             background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
+            height: 66vh !important;
+            min-height: 556px;
             margin-bottom: 20px;
         }
         .header-overlay {
-            background: rgba(0,0,0,.6  );
-            height: 66vh !important;
-            min-height: 556px;
+            background: rgba(0,0,0,.6);
             -webkit-background-size: cover;
             background-size: cover;
+            height: 66vh !important;
+            min-height: 556px;
         }
         #header {
             -webkit-transition: all .5s ease-in-out;
@@ -107,12 +117,6 @@
             transition: all .5s ease-in-out;
             position: fixed;
             padding-top: 40px;
-        }
-        .left-align {
-            text-align: left;
-        }
-        .right-align {
-            text-align: right;
         }
         .logo-sm-top {
             width: 180px;
@@ -152,77 +156,20 @@
             margin-top: -4px;
         }
 
-        .padding-top-20 {
-            padding-top: 20px
-        }
 
-        .padding-top-40 {
-            padding-top: 40px
-        }
 
-        .padding-top-60 {
-            padding-top: 50px
-        }
-
-        .padding-bottom-20 {
-            padding-bottom: 20px
-        }
-
-        .padding-bottom-40 {
-            padding-bottom: 40px
-        }
-
-        .padding-bottom-60 {
-            padding-bottom: 50px
-        }
-
-        h3.text-center,
-        .case-content h3,
-        .results h3 {
-            text-transform: capitalize;
-            color: #FFCB00;
-            font-size: 46px;
-        }
         .case-content .wrapper p:nth-child(2) {
             padding-bottom: 30px;
         }
-        .results p{
-            color: #555;
-            font-family: 'Open Sans', serif;
-            font-size: 20px;
-            font-weight: 300;
-            padding-top: 20px;
-            line-height: 30px;
-        }
-        .results p:first-child {
-            padding-top: 0;
-        }
-        .results p:last-child {
-            padding-top: 0;
-        }
+
         .center-block {
             margin-top: 20px;
             margin-bottom: 10px;
-            /*padding-left: 100px;*/
-            /*padding-right: 100px;*/
-        }
-        .center {
-            margin-left: auto;
-            margin-right: auto;
-
         }
 
-        .results {
-            /*			margin-top: 40px;*/
-        }
         .results p {
             text-align: justify;
         }
-        .footer {
-            margin-top: 40px;
-            text-align: center;
-        }
-
         .footer-main {
             background-color: #282828;
             padding: 50px 0;
@@ -272,10 +219,6 @@
             color: #959595;
             text-decoration: none;
         }
-
-        .footer .logo {
-            margin-bottom: 50px;
-        }
         .footer a {
             color: #dbaa46;
             text-decoration: none;
@@ -299,7 +242,6 @@
             color:#FFCB00;
             font-size: 36px;
         }
-
         .foot-links a {
             color:#FFCB00;
             font-size: 20px;
@@ -312,67 +254,14 @@
         }
         .foot-links a:hover {
             color: #FFCB00;
-            /* background: rgba(0,0,0,0.1); */
             -webkit-transition: .2s all ease-in-out;
             transition: .2s all ease-in-out;
-        }
-
-        .icon-circle {
-            /*display: inline-block;*/
-            display: none;
-            font-size: 24px;
-            color: #1e73be;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            border-radius: 50%;
-            min-height: 20px;
-            min-width: 20px;
-            text-align: center;
-            padding-top: 4px;
-            position: relative;
-            width: 36px;
-            height: 36px;
-            border: 2px solid #1e73be;
-            margin-left: 0.25em;
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            /*vertical-align: -5px;*/
-            -moz-transition: all 0.2s ease-in-out;
-            -o-transition: all 0.2s ease-in-out;
-            -webkit-transition: all 0.2s ease-in-out;
-            transition: all 0.2s ease-in-out;
-            cursor: pointer;
         }
         a, a:hover {
             color: #1e73be			-moz-transition: all 0.2s ease-in-out;
             -o-transition: all 0.2s ease-in-out;
             -webkit-transition: all 0.2s ease-in-out;
             transition: all 0.2s ease-in-out;
-        }
-        .icon-circle:hover {
-            border: 2px solid #1e73be;
-
-        }
-        #shoe {
-            background: #fff;
-            padding: 40px 0;
-            text-align: center;
-        }
-        #shoe .copyright {
-            padding-top: 30px;
-            margin: 0;
-            font-size: 14px;
-            color: #BEBEBE;
-        }
-        #shoe li {
-            padding: 0 20px;
-            margin: 0;
-            font-size: 14px;
-        }
-        #shoe li a {
-            color: #9A9A9A;
-            text-decoration: none;
         }
         .social img {
             -moz-border-radius: 4px;
@@ -381,18 +270,6 @@
         }
         #top .row .col-sm-12:last-child {
             margin-bottom: 20px;
-        }
-        .sm-container {
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .sm-container p {
-            text-align: center;
-            /*padding:0 90px;*/
-        }
-        .hidden {
-            display: none;
         }
 
         /*media queries*/
@@ -644,12 +521,12 @@
 <div class="container foot-link-container">
     <div class="col-xs-12 col-sm-6 foot-links">
         <div class="col-xs-12 ">
-            <a href="http://bit.ly/1I7uFPr" target="_parent">View our work<span class="glyphicon glyphicon-menu-right icon-circle"></span></a>
+            <a href="http://bit.ly/1I7uFPr" target="_parent">View our work</a>
         </div>
     </div>
     <div class="col-xs-12 col-sm-6 foot-links">
         <div class="col-xs-12  ">
-            <a href="mailto:angie@storycafe.com">Lets chat<span class="glyphicon glyphicon-menu-right icon-circle"></span></a>
+            <a href="mailto:angie@storycafe.com">Lets chat</a>
         </div>
     </div>
 </div>
