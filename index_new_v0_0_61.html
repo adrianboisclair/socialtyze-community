@@ -82,17 +82,17 @@
                 <div class="carousel-inner" role="listbox">
 
                     <div class="item active">
-                        <img src="http://lorempixel.com/970/400/food/1" alt="...">
+                        <img src="http://lorempixel.com/1200/800/food/1" class="img-responsive">
                         <div class="carousel-caption"></div>
                     </div>
 
                     <div class="item">
-                        <img src="http://lorempixel.com/970/400/food/2" alt="...">
+                        <img src="http://lorempixel.com/1200/800/food/2" class="img-responsive">
                         <div class="carousel-caption"></div>
                     </div>
 
                     <div class="item">
-                        <img src="http://lorempixel.com/970/400/food/3" alt="...">
+                        <img src="http://lorempixel.com/1200/800/food/3" class="img-responsive">
                         <div class="carousel-caption"></div>
                     </div>
                 </div>
@@ -112,9 +112,36 @@
 
     <div class="row">
         <div class="col-sm-12">
+            <h3 class="text-center">Videography</h3>
+            <div id="ytplayer" class="center-block"></div>
 
+            <script>
+                // Load the IFrame Player API code asynchronously.
+                var tag = document.createElement('script');
+                tag.src = "https://www.youtube.com/player_api";
+                var firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                // Replace the 'ytplayer' element with an <iframe> and
+                // YouTube player after the API code downloads.
+                var player;
+                function onYouTubePlayerAPIReady() {
+                    player = new YT.Player('ytplayer', {
+                        height: '620',
+                        width: '100%',
+                        videoId: 'mndCfjBYEeY'
+                    });
+                }
+            </script>
         </div>
+
+
+
     </div>
+<div class="row">
+
+</div>
+
 
     <hr/>
     <div id="paid-media" class="row ">
