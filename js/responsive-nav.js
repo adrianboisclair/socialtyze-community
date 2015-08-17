@@ -14,6 +14,7 @@ function yScroll() {
         header.style.paddingBottom = "30px";
 //            header.style.backgroundColor = "rgba(0,0,0,.8)";
         header.style.backgroundColor = "transparent";
+        header.style.opacity = "0";
         for( var i = 0; i < link.length; i++) {
             link[i].style.paddingTop = "10px";
         }
@@ -33,6 +34,7 @@ function yScroll() {
         header.style.height="95px";
         header.style.paddingTop = "40px";
         header.style.backgroundColor = "transparent";
+        header.style.opacity = "1";
         for( var i = 0; i < link.length; i++) {
             link[i].style.paddingTop = "5px";
         }
