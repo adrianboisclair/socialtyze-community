@@ -11,47 +11,80 @@
 
 ?>
 <?php /* The loop */ ?>
-<?php while ( have_posts() ) : the_post(); ?>
+<?php while (have_posts()) :
+the_post(); ?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Socialtyze - Social Strategy, Community Management & Media</title>
-    <link rel="shortcut icon" href="http://ec2-52-8-7-213.us-west-1.compute.amazonaws.com/wp-content/themes/twentythirteen/images/favicon.ico" />
+    <link rel="shortcut icon"
+          href="http://ec2-52-8-7-213.us-west-1.compute.amazonaws.com/wp-content/themes/twentythirteen/images/favicon.ico"/>
     <style>
         @import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css);
-        @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
-        @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
-        @import url(https://fonts.googleapis.com/css?family=Open+Sans:700);
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,600);
         body {
             background-color: white;
-            font-family: 'Open Sans', sans-serif;
-            overflow-x: hidden;
             color: #6a7180;
+            font-family: 'Open Sans', sans-serif;
             font-size: 2.2rem;
             line-height: 30px;
+            overflow-x: hidden;
         }
         p {
-            text-align: center;
-        }
-        .main.container p {
             color: #555;
             font-family: 'Open Sans', serif;
             font-size: 20px;
             font-weight: 300;
-            padding-top: 20px;
             line-height: 30px;
+            padding-top: 20px;
+            text-align: center;
         }
         a:hover {
             text-decoration: none;
         }
+        h1 {
+            font-family: 'Open Sans', serif;
+            font-size: 64px;
+            letter-spacing: 3px;
+            font-weight: 300 !important;
+            line-height: 80px;
+            color: #FFFFFF;
+        }
         h3 {
-            text-align: center;
-            color:<?php the_field('primary_color', get_option('page')); ?>;
             text-transform: capitalize;
+            color: #FFCB00;
             font-size: 46px;
             line-height: 150%;
+        }
+        .sm-container {
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hidden {
+            display: none;
+        }
+        .padding-top-20 {
+            padding-top: 20px
+        }
+
+        .padding-top-40 {
+            padding-top: 40px
+        }
+
+        .padding-top-60 {
+            padding-top: 50px
+        }
+        .padding-bottom-20 {
+            padding-bottom: 20px
+        }
+        .padding-bottom-40 {
+            padding-bottom: 40px
+        }
+        .padding-bottom-60 {
+            padding-bottom: 50px
         }
         .inline-block li {
             display: inline-block;
@@ -62,12 +95,11 @@
             margin-right: auto;
         }
         .header-main {
+            margin: 0;
+            padding-top: 40px;
             position: absolute;
             width: 100%;
             z-index: 999;
-            /*text-align: right;*/
-            padding-top: 40px;
-            margin: 0;
         }
         .header-main-nav {
             display: -webkit-box;
@@ -82,45 +114,43 @@
         }
         .header-main-nav li {
             padding-left: 20px;
-            padding-rightt: 20px;
+            padding-right: 20px;
         }
         .header-main-nav {
             font-family: "Open Sans", sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 2px;
             margin-top: 15px;
             padding: 0;
-            font-size: 14px;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 300;
         }
         .header-main-nav li {
             padding-left: 38px;
         }
         .header-main-nav a {
             color: #fff;
-            text-decoration: none;
             display: inline-block;
             padding: 5px 10px;
+            text-decoration: none;
         }
         .header-main .row {
             margin-top: -15px;
         }
         .hero-header {
-            background: url(<?php the_field('hero', get_option('page')); ?>) center center;
-            height: 66vh !important;
-            min-height: 556px;
+            background: url(https://s3-us-west-1.amazonaws.com/communityproject/img/cpk_photo_002.jpg) no-repeat center center;
             -webkit-background-size: cover;
             background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
+            height: 66vh !important;
+            min-height: 556px;
             margin-bottom: 20px;
         }
         .header-overlay {
-            background: rgba(0,0,0,.6  );
-            height: 66vh !important;
-            min-height: 556px;
+            background: rgba(0,0,0,.6);
             -webkit-background-size: cover;
             background-size: cover;
+            height: 66vh !important;
+            min-height: 556px;
         }
         #header {
             -webkit-transition: all .5s ease-in-out;
@@ -131,12 +161,6 @@
             position: fixed;
             padding-top: 40px;
         }
-        .left-align {
-            text-align: left;
-        }
-        .right-align {
-            text-align: right;
-        }
         .logo-sm-top {
             width: 180px;
             height: auto;
@@ -145,14 +169,6 @@
         }
         .logo-container {
             padding-top: 135px;
-        }
-        .logo-container h1 {
-            font-family: 'Open Sans', serif;
-            font-size: 64px;
-            letter-spacing: 3px;
-            font-weight: 300 !important;
-            line-height: 80px;
-            color: #FFFFFF;
         }
         .hr-sm-180 {
             width: 180px;
@@ -163,6 +179,7 @@
         }
         .main.container {
             max-width: 1000px;
+            padding-bottom: 80px;;
         }
         .logo-container h2{
             color: #FFFFFF;
@@ -174,79 +191,21 @@
             padding-top: 0px;
             margin-top: -4px;
         }
-
-        .padding-top-20 {
-            padding-top: 20px
-        }
-
-        .padding-top-40 {
-            padding-top: 40px
-        }
-
-        .padding-top-60 {
-            padding-top: 50px
-        }
-
-        .padding-bottom-20 {
-            padding-bottom: 20px
-        }
-
-        .padding-bottom-40 {
-            padding-bottom: 40px
-        }
-
-        .padding-bottom-60 {
-            padding-bottom: 50px
-        }
-
-        h3{
-            text-transform: capitalize;
-            color: <?php the_field('primary_color', get_option('page')); ?>;
-            font-size: 46px;
-        }
-        #apps p:last-child {
-            padding-bottom: 20px;
-        }
-        .case-content .wrapper p:nth-child(2) {
-            padding-bottom: 30px;
-        }
-        .results p{
-            color: #555;
-            font-family: 'Open Sans', serif;
-            font-size: 20px;
-            font-weight: 300;
-            padding-top: 20px;
-            line-height: 30px;
-        }
-        .results p:first-child {
-            padding-top: 0;
-        }
-        .results p:last-child {
-            padding-top: 0;
-        }
         .center-block {
             margin-top: 20px;
             margin-bottom: 10px;
-            /*padding-left: 100px;*/
-            /*padding-right: 100px;*/
         }
-        .center {
-            margin-left: auto;
-            margin-right: auto;
-
+        #carousel-example-generic {
+            margin-top:40px;
+            margin-bottom:40px;
         }
-
-        .results {
-            /*			margin-top: 40px;*/
+        #ytplayer {
+            width: 100%;
+            min-height: 550px;
         }
-        .results p {
-            text-align: justify;
+        #apps div:nth-child(4) {
+            padding-bottom:20px;
         }
-        .footer {
-            margin-top: 40px;
-            text-align: center;
-        }
-
         .footer-main {
             background-color: #282828;
             padding: 50px 0;
@@ -296,10 +255,6 @@
             color: #959595;
             text-decoration: none;
         }
-
-        .footer .logo {
-            margin-bottom: 50px;
-        }
         .footer a {
             color: #dbaa46;
             text-decoration: none;
@@ -320,14 +275,13 @@
             text-align: center;
         }
         .foot-links a {
-            color:<?php the_field('primary_color', get_option('page')); ?>;
+            color:#FFCB00;
             font-size: 36px;
         }
-
         .foot-links a {
-            color:<?php the_field('primary_color', get_option('page')); ?>;
+            color:#FFCB00;
             font-size: 20px;
-            border: 2px solid <?php the_field('primary_color', get_option('page')); ?>;
+            border: 2px solid #FFCB00;
             display: inline-block;
             padding: 12px 35px;
             text-transform: uppercase;
@@ -335,68 +289,16 @@
             width: 250px;
         }
         .foot-links a:hover {
-            color: #459fed;
-            /* background: rgba(0,0,0,0.1); */
+            color: #FFCB00;
             -webkit-transition: .2s all ease-in-out;
             transition: .2s all ease-in-out;
         }
-
-        .icon-circle {
-            /*display: inline-block;*/
-            display: none;
-            font-size: 24px;
+        a, a:hover {
             color: #1e73be;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            border-radius: 50%;
-            min-height: 20px;
-            min-width: 20px;
-            text-align: center;
-            padding-top: 4px;
-            position: relative;
-            width: 36px;
-            height: 36px;
-            border: 2px solid #1e73be;
-            margin-left: 0.25em;
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            /*vertical-align: -5px;*/
             -moz-transition: all 0.2s ease-in-out;
             -o-transition: all 0.2s ease-in-out;
             -webkit-transition: all 0.2s ease-in-out;
             transition: all 0.2s ease-in-out;
-            cursor: pointer;
-        }
-        a, a:hover {
-            color: #1e73be			-moz-transition: all 0.2s ease-in-out;
-            -o-transition: all 0.2s ease-in-out;
-            -webkit-transition: all 0.2s ease-in-out;
-            transition: all 0.2s ease-in-out;
-        }
-        .icon-circle:hover {
-            border: 2px solid #1e73be;
-
-        }
-        #shoe {
-            background: #fff;
-            padding: 40px 0;
-            text-align: center;
-        }
-        #shoe .copyright {
-            padding-top: 30px;
-            margin: 0;
-            font-size: 14px;
-            color: #BEBEBE;
-        }
-        #shoe li {
-            padding: 0 20px;
-            margin: 0;
-            font-size: 14px;
-        }
-        #shoe li a {
-            color: #9A9A9A;
-            text-decoration: none;
         }
         .social img {
             -moz-border-radius: 4px;
@@ -406,42 +308,14 @@
         #top .row .col-sm-12:last-child {
             margin-bottom: 20px;
         }
-        .sm-container {
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .sm-container p {
-            text-align: center;
-            /*padding:0 90px;*/
-        }
-        .hidden {
-            display: none;
-        }
-        #apps2{
-        <?php the_field('show_hide_1', get_option('page')); ?>;
-        }
-        #apps3{
-        <?php the_field('show_hide_2', get_option('page')); ?>;
-        }
-
         /*media queries*/
         /* Custom, iPhone Retina */
         @media only screen and (min-width : 320px) {
-            .center-block {padding: 0;}
+            /*.center-block {padding: 0;}*/
         }
         /* Extra Small Devices, Phones */
         @media only screen and (min-width : 480px) {
-            .center-block {padding: 0;}
-        }
-        /* Medium Devices, Desktops */
-        @media only screen and (max-width : 900px) {
-
-
-        }
-        /* Large Devices, Wide Screens */
-        @media only screen and (max-width : 1500px) {
-
+            /*.center-block {padding: 0;}*/
         }
         @media only screen and (max-width : 1540px) {
             .res-wrapper {
@@ -501,6 +375,62 @@
             }
         }
     </style>
+    <style>
+        h3 {
+            text-align: center;
+            color: <?php the_field('primary_color', get_option('page')); ?>;
+            text-transform: capitalize;
+            font-size: 46px;
+            line-height: 150%;
+        }
+
+        .hero-header {
+            background: url(<?php the_field('hero', get_option('page')); ?>) center center;
+            height: 66vh !important;
+            min-height: 556px;
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            text-transform: capitalize;
+            color: <?php the_field('primary_color', get_option('page')); ?>;
+            font-size: 46px;
+        }
+
+
+        .foot-links a {
+            color: <?php the_field('primary_color', get_option('page')); ?>;
+            font-size: 36px;
+        }
+
+        .foot-links a {
+            color: <?php the_field('primary_color', get_option('page')); ?>;
+            font-size: 20px;
+            border: 2px solid <?php the_field('primary_color', get_option('page')); ?>;
+            display: inline-block;
+            padding: 12px 35px;
+            text-transform: uppercase;
+            text-decoration: none;
+            width: 250px;
+        }
+
+
+        #apps2 {
+        <?php the_field('show_hide_1', get_option('page')); ?>;
+        }
+
+        #apps3 {
+        <?php the_field('show_hide_2', get_option('page')); ?>;
+        }
+        #videography {
+        <?php the_field('videography', get_option('page')); ?>;
+        }
+
+    </style>
 </head>
 <body>
 <!--Begin Site Header-->
@@ -523,82 +453,190 @@
                     <li><a class="link" href="http://wip.socialtyze.com/contact/" title="Contact">Contact</a></li>
                     <li><a class="link" href="http://blog.socialtyze.com" title="Blog">Blog</a></li>
                 </ul>
-            </div><!--col-sm-12 col-md-8 right-align -->
-        </div><!--row-->
-    </div><!--container-fluid-->
-</header><!--header-main-->
+            </div>
+            <!--col-sm-12 col-md-8 right-align -->
+        </div>
+        <!--row-->
+    </div>
+    <!--container-fluid-->
+</header>
+<!--header-main-->
 <!--Begin Community Management Page-->
 <div class="container-fluid">
     <div class="row hero-header">
         <div class="header-overlay">
             <div class="container-fluid wrapper">
                 <div class="logo-container center-sm res-wrapper">
-                    <hr class="hr-sm-180 center-sm" />
+                    <hr class="hr-sm-180 center-sm"/>
                     <h1><?php the_title(); ?></h1>
+
                     <h2><?php the_field('subheader', get_option('page')); ?></h2>
-                </div><!-- logo-container -->
-            </div><!-- container -->
-        </div><!-- header-overlay-->
-    </div><!-- row header -->
+                </div>
+                <!-- logo-container -->
+            </div>
+            <!-- container -->
+        </div>
+        <!-- header-overlay-->
+    </div>
+    <!-- row header -->
 </div>
 <div class="main container">
     <div id="top">
         <div class="row">
             <div class="col-sm-12">
                 <?php the_field('overview', get_option('page')); ?>
-            </div><!-- col-sm-12 -->
-        </div><!-- row -->
+            </div>
+            <!-- col-sm-12 -->
+        </div>
+        <!-- row -->
         <hr/>
         <div id="community" class="row ">
             <div class="col-sm-12">
                 <!--<h2 class="text-center">Our Strategy</h2>-->
                 <?php the_field('community', get_option('page')); ?>
-            </div><!-- col-sm-12 -->
-        </div><!--  row -->
-    </div><!-- #top -->
+            </div>
+            <!-- col-sm-12 -->
+        </div>
+        <!--  row -->
+    </div>
+    <!-- #top -->
     <hr/>
-    <div id="photography" class="row ">
-        <div class="col-sm-12">
-            <?php the_field('photography', get_option('page')); ?>
-        </div><!-- col-sm-12 -->
-    </div><!-- #photography -->
-    <div id="videography" class="row ">
-        <div class="col-sm-12">
-            <?php the_field('videography', get_option('page')); ?>
-        </div><!-- col-sm-12 -->
-    </div><!-- #videography -->
 
+
+
+
+    <div id="photography" class="row" style="<?php the_field('photography', get_option('page')); ?>">
+
+
+        <div class="col-sm-12">
+
+
+            <h3 class="text-center"><?php the_field('photography_title', get_option('page')); ?></h3>
+<!--            <h3 class="text-center">Photography</h3>-->
+
+
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+
+                    <div class="item active">
+                        <img src="<?php the_field('photo_slider_01', get_option('page')); ?>" class="img-responsive">
+
+                        <div class="carousel-caption"></div>
+                    </div>
+
+                    <div class="item">
+                        <img src="<?php the_field('photo_slider_02', get_option('page')); ?>" class="img-responsive">
+                        <div class="carousel-caption"></div>
+                    </div>
+
+                    <div class="item">
+                        <img src="<?php the_field('photo_slider_03', get_option('page')); ?>" class="img-responsive">
+                        <div class="carousel-caption"></div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+        </div>        <!-- col-sm-12 -->
+
+    <hr style="margin-top:60px;"/>
+    </div>
+    </div><!-- #photography -->
+
+
+    <div id="videography" class="row" style="<?php the_field('videography', get_option('page')); ?>">
+
+        <div class="col-sm-12">
+
+            <h3 class="text-center"><?php the_field('videography_title', get_option('page')); ?></h3>
+            <div id="ytplayer" class="center-block"></div>
+
+            <script>
+                // Load the IFrame Player API code asynchronously.
+                var tag = document.createElement('script');
+                tag.src = "https://www.youtube.com/player_api";
+                var firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                // Replace the 'ytplayer' element with an <iframe> and
+                // YouTube player after the API code downloads.
+                var player;
+                function onYouTubePlayerAPIReady() {
+                    player = new YT.Player('ytplayer', {
+//                        height: '620',
+//                        width: '100%',
+                        videoId: '<?php the_field('youtube_video_id', get_option('page')); ?>',
+                        events: {
+                            'onReady' : onPlayerReady
+                        }
+                    });
+                }
+                function onPlayerReady(event) {
+                    event.target.setPlaybackQuality('hd720');
+                }
+                function onPlayerStateChange(event) {
+                    if (event.data == YT.PlayerState.BUFFERING) {
+                        event.target.setPlaybackQuality('hd1080');
+                    }
+                }
+            </script>
+        </div>        <!-- col-sm-12 -->
+    </div>    <!-- #videography -->
+    <hr style="margin-top: 60px;<?php the_field('videography', get_option('page')); ?>"/>
     <div id="paid-media" class="row ">
         <div class="col-sm-12">
             <?php the_field('facebook_paid_media', get_option('page')); ?>
-        </div><!-- col-sm-12 -->
-    </div><!-- #paid-media -->
+        </div>
+        <!-- col-sm-12 -->
+    </div>
+    <!-- #paid-media -->
     <hr/>
     <div id="apps" class="row">
         <?php the_field('apps_1', get_option('page')); ?>
-    </div><!-- apps row -->
-    <hr/>
+    </div>
+    <!-- apps row -->
+    <hr style="margin-top: 60px"/>
     <div id="apps2" class="row ">
         <div class="col-sm-12">
             <?php the_field('apps_2', get_option('page')); ?>
         </div>
-    </div><!-- row -->
-    <hr/>
+    </div>
+    <!-- row -->
+    <hr style="margin-top: 60px"/>
     <div id="apps3" class="row">
         <div class="col-sm-12">
             <?php the_field('apps_3', get_option('page')); ?>
         </div>
     </div>
-</div><!--Main Container-->
+</div>
+<!--Main Container-->
 <div class="container foot-link-container">
     <div class="col-xs-12 col-sm-6 foot-links">
         <div class="col-xs-12 ">
-            <a href="http://bit.ly/1I7uFPr" target="_parent">View our work<span class="glyphicon glyphicon-menu-right icon-circle"></span></a>
+            <a href="http://bit.ly/1I7uFPr" target="_parent">View our work<span
+                    class="glyphicon glyphicon-menu-right icon-circle"></span></a>
         </div>
     </div>
     <div class="col-xs-12 col-sm-6 foot-links">
         <div class="col-xs-12  ">
-            <a href="mailto:angie@storycafe.com">Lets chat<span class="glyphicon glyphicon-menu-right icon-circle"></span></a>
+            <a href="mailto:angie@storycafe.com">Lets chat<span
+                    class="glyphicon glyphicon-menu-right icon-circle"></span></a>
         </div>
     </div>
 </div>
@@ -612,14 +650,21 @@
         <li>hello@socialtyze.com</li>
         <li>3701 N Highland Ave. Suite 200 Manhattan Beach, CA 90266</li>
         <li class="socialIcons">
-            <a target="_blank" href="https://www.facebook.com/socialtyze?ref=hl"><img src="http://socialtyze.com/img/v5/social-fb.png" alt=""></a>
-            <a target="_blank" href="https://twitter.com/socialtyze"><img src="http://socialtyze.com/img/v5/social-tw.png" alt=""></a>
-            <a target="_blank" href="https://www.linkedin.com/company/socialtyze"><img src="http://socialtyze.com/img/v5/social-li.png" alt=""></a>
+            <a target="_blank" href="https://www.facebook.com/socialtyze?ref=hl"><img
+                    src="http://socialtyze.com/img/v5/social-fb.png" alt=""></a>
+            <a target="_blank" href="https://twitter.com/socialtyze"><img
+                    src="http://socialtyze.com/img/v5/social-tw.png" alt=""></a>
+            <a target="_blank" href="https://www.linkedin.com/company/socialtyze"><img
+                    src="http://socialtyze.com/img/v5/social-li.png" alt=""></a>
         </li>
-        <li><a data-listid="j/AC/B9F/F14/B84ECC146E39B18E" class="createsend-button button button-c">Newsletter Signup</a></li>
+        <li><a data-listid="j/AC/B9F/F14/B84ECC146E39B18E" class="createsend-button button button-c">Newsletter
+                Signup</a></li>
     </ul>
 </footer>
 <script>
+    /**
+     * Created by adrian on 8/17/15.
+     */
     var header, logo, yPos, windowWidth, link;
     function yScroll() {
         header = document.getElementById('header');
@@ -633,6 +678,7 @@
             header.style.paddingBottom = "30px";
 //            header.style.backgroundColor = "rgba(0,0,0,.8)";
             header.style.backgroundColor = "transparent";
+            header.style.opacity = "0";
             for( var i = 0; i < link.length; i++) {
                 link[i].style.paddingTop = "10px";
             }
@@ -652,6 +698,7 @@
             header.style.height="95px";
             header.style.paddingTop = "40px";
             header.style.backgroundColor = "transparent";
+            header.style.opacity = "1";
             for( var i = 0; i < link.length; i++) {
                 link[i].style.paddingTop = "5px";
             }
@@ -669,5 +716,8 @@
     }
     window.addEventListener("scroll", yScroll);
 </script>
+
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>
