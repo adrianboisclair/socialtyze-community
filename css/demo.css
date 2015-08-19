@@ -1,0 +1,39 @@
+/*
+ * blueimp Gallery Demo CSS 2.0.0
+ * https://github.com/blueimp/Gallery
+ *
+ * Copyright 2013, Sebastian Tschan
+ * https://blueimp.net
+ *
+ * Licensed under the MIT license:
+ * http://www.opensource.org/licenses/MIT
+ */
+
+#blueimp-video-carousel a {
+  color: #ffffff;
+  text-decoration: none;
+}
+#blueimp-video-carousel img {
+  border: 0;
+  vertical-align: middle;
+}
+#blueimp-video-carousel h1 {
+  line-height: 1em;
+}
+#blueimp-video-carousel h2,
+#blueimp-video-carousel .links {
+  text-align: center;
+}
+
+@media (min-width: 481px) {
+  #blueimp-video-carousel .navigation {
+    list-style: none;
+    padding: 0;
+  }
+  #blueimp-video-carousel .navigation li {
+    display: inline-block;
+  }
+  #blueimp-video-carousel .navigation li:not(:first-child):before {
+    content: '| ';
+  }
+}
