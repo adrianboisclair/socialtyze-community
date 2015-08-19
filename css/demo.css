@@ -24,6 +24,12 @@
 #blueimp-video-carousel .links {
   text-align: center;
 }
+a.next {
+  padding-right:40px
+}
+a.prev {
+  padding-left:40px
+}
 
 @media (min-width: 481px) {
   #blueimp-video-carousel .navigation {
