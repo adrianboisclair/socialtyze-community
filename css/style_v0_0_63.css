@@ -176,6 +176,9 @@ h3 {
 #videography{
     padding-bottom: 40px;
 }
+div#blueimp-video-carousel {
+    margin-top: 40px;
+}
 
 #carousel-example-generic {
     margin-top:40px;
