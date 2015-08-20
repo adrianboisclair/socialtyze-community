@@ -145,6 +145,9 @@ h3 {
 .logo-container {
     padding-top: 135px;
 }
+hr {
+    margin:0;
+}
 .hr-sm-180 {
     width: 180px;
     margin: 1px 0 0;
@@ -154,7 +157,7 @@ h3 {
 }
 .main.container {
     max-width: 1000px;
-    padding-bottom: 80px;;
+    padding-bottom: 15px;
 }
 .logo-container h2{
     color: #FFFFFF;
@@ -168,29 +171,26 @@ h3 {
 }
 .center-block {
     margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 #photography{
     padding-bottom: 20px;
 }
 #videography{
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 }
 div#blueimp-video-carousel {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 #carousel-example-generic {
-    margin-top:40px;
-    margin-bottom:40px;
+    margin-top:20px;
+    margin-bottom:20px;
 }
 #ytplayer {
     padding-top: 40px;
     padding-bottom: 40px;
 
-}
-#apps div:nth-child(4) {
-    padding-bottom:20px;
 }
 .footer-main {
     background-color: #282828;
@@ -254,10 +254,10 @@ a:active, a:hover {
     color: #ff8f33;
 }
 .foot-link-container {
-    padding-top: 40px;
+    padding-top: 10px;
 }
 .foot-links {
-    padding-bottom: 40px;
+    padding-bottom: 60px;
     text-align: center;
 }
 .foot-links a {

@@ -65,7 +65,7 @@
                 <!--<h2 class="text-center">Our Strategy</h2>-->
                 <h3 class="text-center">community</h3>
                 <p class="text-center">Our content strategy for CPK’s social channels (Facebook, Instagram and Twitter) was centered on the types of content specific audiences respond well to on each platform. The food photography was upgraded, tone was identified, and we also introduced a ‘Lifestyle’ element.</p>
-                <img src="img/cpk/CommunityCPK.png" class="center-block img-responsive" style="margin-bottom: 30px;"/>
+                <img src="img/cpk/CommunityCPK.png" class="center-block img-responsive"/>
             </div><!-- col-sm-12 -->
         </div><!--  row -->
     </div><!-- #top -->
@@ -133,8 +133,8 @@
     <div id="paid-media" class="row ">
         <div class="col-sm-12">
             <h3 class="text-center">Facebook Paid Media</h3>
-            <p class="text-center padding-bottom-20"> We have supported various campaigns with strategic paid media to build on CPK’s existing fanbase, including app installs, email acquisition and general awareness. One of our most successful campaigns was in support of CPK’s Game On promotion, which runs just before March Madness. All of CPK’s items are pitted against one another until one winner is crowned the fan favorite (Butter Cake, in case you’re wondering). Our paid media significantly extended the reach and engagement for the campaign.</p>
-            <img src="img/cpk/CPKFacebookAds.png" class="center-block img-responsive padding-top-20 padding-bottom-20" style="margin-bottom: 40px;"/>
+            <p class="text-center "> We have supported various campaigns with strategic paid media to build on CPK’s existing fanbase, including app installs, email acquisition and general awareness. One of our most successful campaigns was in support of CPK’s Game On promotion, which runs just before March Madness. All of CPK’s items are pitted against one another until one winner is crowned the fan favorite (Butter Cake, in case you’re wondering). Our paid media significantly extended the reach and engagement for the campaign.</p>
+            <img src="img/cpk/CPKFacebookAds.png" class="center-block img-responsive padding-top-20 padding-bottom-20"/>
         </div><!-- col-sm-12 -->
     </div><!-- #paid-media -->
     <hr/>
@@ -207,12 +207,16 @@
 <div class="container foot-link-container">
     <div class="col-xs-12 col-sm-6 foot-links">
         <div class="col-xs-12 ">
-            <a href="http://bit.ly/1I7uFPr" target="_parent">View our work<span class="glyphicon glyphicon-menu-right icon-circle"></span></a>
+            <a href="http://bit.ly/1I7uFPr" target="_parent">View our work
+                <!--<span class="glyphicon glyphicon-menu-right icon-circle"></span>-->
+            </a>
         </div>
     </div>
     <div class="col-xs-12 col-sm-6 foot-links">
         <div class="col-xs-12  ">
-            <a href="mailto:angie@storycafe.com">Lets chat<span class="glyphicon glyphicon-menu-right icon-circle"></span></a>
+            <a href="mailto:angie@storycafe.com">Lets chat
+                <!--<span class="glyphicon glyphicon-menu-right icon-circle"></span>-->
+            </a>
         </div>
     </div>
 </div>
@@ -232,6 +236,140 @@
         <li><a data-listid="j/AC/B9F/F14/B84ECC146E39B18E" class="createsend-button button button-c">Newsletter Signup</a></li>
     </ul>
 </footer>
+<style>
+    /* line 147, ../../scss/v5.scss */
+    .button {
+        display: inline-block;
+        border: 2px solid #959595;
+        padding: 12px 35px;
+        text-transform: uppercase;
+        color: #959595;
+        text-decoration: none;
+    }
+    /* line 154, ../../scss/v5.scss */
+    .button:hover {
+        background-color: rgba(255, 255, 255, 0.03);
+    }
+    /* line 157, ../../scss/v5.scss */
+    .button-a {
+        color: #1687e9;
+        border-color: #1687e9;
+    }
+    /* line 160, ../../scss/v5.scss */
+    .button-a:hover {
+        color: #459fed;
+    }
+    /* line 164, ../../scss/v5.scss */
+    .button-b {
+        color: #1bbc9b;
+        border-color: #1bbc9b;
+    }
+    /* line 167, ../../scss/v5.scss */
+    .button-b:hover {
+        color: #2ae0bb;
+    }
+    /* line 171, ../../scss/v5.scss */
+    .button-c {
+        color: #fff;
+        border-color: #fff;
+    }
+    /* line 174, ../../scss/v5.scss */
+    .button-c:hover {
+        color: white;
+    }
+
+    /* line 179, ../../scss/v5.scss */
+    .newsletter {
+        background-color: #1687E9;
+        position: absolute;
+        padding: 15px 20px 20px 20px;
+        display: none;
+        text-align: center;
+    }
+    .newsletter p {
+        padding:0;
+        margin:0;
+    }
+    /* line 185, ../../scss/v5.scss */
+    .newsletter input {
+        border: 0;
+        font-size: 16px;
+        font-weight: 300;
+        /*  padding: 6px 10px;*/
+        width: 170px;
+        height: 30px;
+    }
+    /* line 192, ../../scss/v5.scss */
+    .newsletter label {
+        color: #fff;
+        display: block;
+        text-align: left;
+        font-size: 11px;
+        text-transform: uppercase;
+        padding-top: 0;
+        margin-bottom: 0;
+    }
+    /* line 200, ../../scss/v5.scss */
+    .newsletter button {
+        width: 100%;
+        padding: 8px 0;
+    }
+    /* line 204, ../../scss/v5.scss */
+    .newsletter:after {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 10px 10px 0;
+        border-color: #1687E9 transparent;
+        display: block;
+        width: 0;
+        z-index: 1;
+        margin-left: -10px;
+        bottom: -10px;
+        left: 50%;
+    }
+    label {
+        font-weight:500;
+    }
+</style>
+
+<form class="newsletter" action="http://socialtyze.createsend.com/t/j/s/payhh/" method="post" style="top: 4486px; left: 1255.734375px; display: none;">
+    <p>
+        <label for="fieldName">Name</label>
+        <input id="fieldName" name="cm-name" type="text">
+    </p>
+    <p>
+        <label for="fieldEmail">Email</label>
+        <input id="fieldEmail" name="cm-payhh-payhh" type="email" required="">
+    </p>
+    <p>
+        <button class="button button-c" style="font-size: 12px; background-color: transparent; margin-top: 10px;" type="submit">Subscribe</button>
+    </p>
+</form>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+
+
+<script>
+    $(function() {
+        $(".createsend-button").click(function() {
+            var $button = $(this);
+            var $form = $(".newsletter");
+
+            if(!$form.is(":visible"))
+                $form.css({
+                    top: $button.offset().top - $form.outerHeight() - 15,
+                    left: $button.offset().left - ($form.outerWidth() - $button.outerWidth())/2
+                }).fadeIn(150);
+            else
+                $form.fadeOut(150);
+        });
+    });
+</script>
+
+
+
 <script src="js/responsive-nav.js"></script>
 <script src="js/blueimp-helper.js"></script>
 <script src="js/blueimp-gallery.js"></script>
