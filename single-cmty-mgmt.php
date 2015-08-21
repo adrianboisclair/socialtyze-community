@@ -7,7 +7,7 @@
  * @since Twenty Thirteen 1.0
  */
 
-//get_header();
+get_header();
 
 ?>
 <?php /* The loop */ ?>
@@ -20,404 +20,39 @@ the_post(); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Socialtyze - Social Strategy, Community Management & Media</title>
     <link rel="shortcut icon"
-          href="http://ec2-52-8-7-213.us-west-1.compute.amazonaws.com/wp-content/themes/twentythirteen/images/favicon.ico"/>
+          href="<?php bloginfo('template_directory'); ?>/images/favicon.ico"/>
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/style_v0_0_65.css"/>
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/blueimp-gallery.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/blueimp-gallery-indicator.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/blueimp-gallery-video.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/demo.css">
     <style>
-        @import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css);
-        @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,600);
-        body {
-            background-color: white;
-            color: #6a7180;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 2.2rem;
-            line-height: 30px;
-            overflow-x: hidden;
-        }
-        p {
-            color: #555;
-            font-family: 'Open Sans', serif;
-            font-size: 20px;
-            font-weight: 300;
-            line-height: 30px;
-            padding-top: 20px;
-            text-align: center;
-        }
-        a:hover {
-            text-decoration: none;
-        }
-        h1 {
-            font-family: 'Open Sans', serif;
-            font-size: 64px;
-            letter-spacing: 3px;
-            font-weight: 300 !important;
-            line-height: 80px;
-            color: #FFFFFF;
+        html{
+            margin-top:0;
         }
         h3 {
-            text-transform: capitalize;
-            color: #FFCB00;
-            font-size: 46px;
-            line-height: 150%;
-        }
-        .sm-container {
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .hidden {
-            display: none;
-        }
-        .padding-top-20 {
-            padding-top: 20px
-        }
-
-        .padding-top-40 {
-            padding-top: 40px
-        }
-
-        .padding-top-60 {
-            padding-top: 50px
-        }
-        .padding-bottom-20 {
-            padding-bottom: 20px
-        }
-        .padding-bottom-40 {
-            padding-bottom: 40px
-        }
-        .padding-bottom-60 {
-            padding-bottom: 50px
-        }
-        .inline-block li {
-            display: inline-block;
-        }
-        .wrapper {
-            max-width: 1500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .header-main {
-            margin: 0;
-            padding-top: 40px;
-            position: absolute;
-            width: 100%;
-            z-index: 999;
-        }
-        .header-main-nav {
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-justify-content: flex-end;
-            -webkit-box-pack: end;
-            -ms-flex-pack: end;
-            justify-content: flex-end;
-
-        }
-        .header-main-nav li {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-        .header-main-nav {
-            font-family: "Open Sans", sans-serif;
-            font-size: 14px;
-            font-weight: 300;
-            letter-spacing: 2px;
-            margin-top: 15px;
-            padding: 0;
-            text-transform: uppercase;
-        }
-        .header-main-nav li {
-            padding-left: 38px;
-        }
-        .header-main-nav a {
-            color: #fff;
-            display: inline-block;
-            padding: 5px 10px;
-            text-decoration: none;
-        }
-        .header-main .row {
-            margin-top: -15px;
-        }
-        .hero-header {
-            background: url(https://s3-us-west-1.amazonaws.com/communityproject/img/cpk_photo_002.jpg) no-repeat center center;
-            -webkit-background-size: cover;
-            background-size: cover;
-            height: 66vh !important;
-            min-height: 556px;
-            margin-bottom: 20px;
-        }
-        .header-overlay {
-            background: rgba(0,0,0,.6);
-            -webkit-background-size: cover;
-            background-size: cover;
-            height: 66vh !important;
-            min-height: 556px;
-        }
-        #header {
-            -webkit-transition: all .5s ease-in-out;
-            -moz-transition: all .5s ease-in-out;
-            -ms-transition: all .5s ease-in-out;
-            -o-transition: all .5s ease-in-out;
-            transition: all .5s ease-in-out;
-            position: fixed;
-            padding-top: 40px;
-        }
-        .logo-sm-top {
-            width: 180px;
-            height: auto;
-            padding-top: 15px;
-            margin-left: -15px;
-        }
-        .logo-container {
-            padding-top: 135px;
-        }
-        .hr-sm-180 {
-            width: 180px;
-            margin: 1px 0 0;
-            padding: 0;
-            border: 0;
-            border-bottom: 1px solid #fff;
-        }
-        .main.container {
-            max-width: 1000px;
-            padding-bottom: 80px;;
-        }
-        .logo-container h2{
-            color: #FFFFFF;
-            text-transform: uppercase;
-            font-size: 19px;
-            font-family: 'Open Sans', serif;
-            font-weight: 600;
-            letter-spacing: 2px;
-            padding-top: 0px;
-            margin-top: -4px;
-        }
-        .center-block {
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-        #carousel-example-generic {
-            margin-top:40px;
-            margin-bottom:40px;
-        }
-        #ytplayer {
-            width: 100%;
-            min-height: 550px;
-        }
-        #apps div:nth-child(4) {
-            padding-bottom:20px;
-        }
-        .footer-main {
-            background-color: #282828;
-            padding: 50px 0;
-            color: #fff;
-            font-size: 12px;
-            text-align: center;
-        }
-        .u-constrict {
-            max-width: 1500px;
-            margin: 0 auto;
-            padding-left: 30px;
-            padding-right: 30px;
-        }
-        .footer-main li {
-            margin: 0 20px;
-        }
-        .u-sideBySide li {
-            display: inline-block;
-        }
-        .socialIcons img {
-            margin: 0 5px;
-        }
-        img {
-            vertical-align: middle;
-        }
-        .footer-main .button {
-            cursor: pointer;
-        }
-        .button-c:hover {
-            color: white;
-        }
-        .button:hover {
-            background-color: rgba(255, 255, 255, 0.03);
-        }
-        a:active, a:hover {
-            outline: 0;
-        }
-        .button-c {
-            color: #fff;
-            border-color: #fff;
-        }
-        .button {
-            display: inline-block;
-            border: 2px solid #959595;
-            padding: 12px 35px;
-            text-transform: uppercase;
-            color: #959595;
-            text-decoration: none;
-        }
-        .footer a {
-            color: #dbaa46;
-            text-decoration: none;
-            -webkit-transition: all .5s;
-            -moz-transition: all .5s;
-            -ms-transition: all .5s;
-            -o-transition: all .5s;
-            transition: all .5s;
-        }
-        .footer a:hover {
-            color: #ff8f33;
-        }
-        .foot-link-container {
-            padding-top: 40px;
-        }
-        .foot-links {
-            padding-bottom: 40px;
-            text-align: center;
-        }
-        .foot-links a {
-            color:#FFCB00;
-            font-size: 36px;
-        }
-        .foot-links a {
-            color:#FFCB00;
-            font-size: 20px;
-            border: 2px solid #FFCB00;
-            display: inline-block;
-            padding: 12px 35px;
-            text-transform: uppercase;
-            text-decoration: none;
-            width: 250px;
-        }
-        .foot-links a:hover {
-            color: #FFCB00;
-            -webkit-transition: .2s all ease-in-out;
-            transition: .2s all ease-in-out;
-        }
-        a, a:hover {
-            color: #1e73be;
-            -moz-transition: all 0.2s ease-in-out;
-            -o-transition: all 0.2s ease-in-out;
-            -webkit-transition: all 0.2s ease-in-out;
-            transition: all 0.2s ease-in-out;
-        }
-        .social img {
-            -moz-border-radius: 4px;
-            -webkit-border-radius: 4px;
-            border-radius: 4px;
-        }
-        #top .row .col-sm-12:last-child {
-            margin-bottom: 20px;
-        }
-        /*media queries*/
-        /* Custom, iPhone Retina */
-        @media only screen and (min-width : 320px) {
-            /*.center-block {padding: 0;}*/
-        }
-        /* Extra Small Devices, Phones */
-        @media only screen and (min-width : 480px) {
-            /*.center-block {padding: 0;}*/
-        }
-        @media only screen and (max-width : 1540px) {
-            .res-wrapper {
-                margin-left: 30px;
-                margin-right: 30px;
-            }
-        }
-        @media only screen and (max-width: 768px) {
-            #header {
-                padding-top: 10px;
-            }
-            .right-align {
-                text-align: center;
-            }
-            .left-align {
-                text-align: center;
-            }
-            .center-sm {
-                text-align: center;
-            }
-            .hr-sm-180 {
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .header-main-nav {
-                display: -webkit-box;
-                display: -webkit-flex;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-justify-content: space-around;
-                -moz-justify-content: space-around;
-                -ms-flex-pack: distribute;
-                justify-content: space-around;
-                padding-left:10px;
-                padding-right:10px;
-            }
-            .header-main-nav li {padding:0;}
-            .header-main-nav a {
-                padding: 0;
-            }
-            .wrapper {
-                padding-left: 0;
-                padding-right: 0;
-                margin: 0;
-            }
-        }
-        @media only screen and (max-width: 500px) {
-            .header-main-nav {
-                width:100%;
-                padding-left:10px;
-                padding-right:10px;
-            }
-            .wrapper {
-                padding-left: 0;
-                padding-right: 0;
-                margin: 0;
-            }
-        }
-    </style>
-    <style>
-        h3 {
-            text-align: center;
             color: <?php the_field('primary_color', get_option('page')); ?>;
-            text-transform: capitalize;
-            font-size: 46px;
-            line-height: 150%;
         }
 
         .hero-header {
             background: url(<?php the_field('hero', get_option('page')); ?>) center center;
-            height: 66vh !important;
-            min-height: 556px;
-            -webkit-background-size: cover;
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            margin-bottom: 20px;
+            -webkit-background-size:cover;
+            background-size:cover;
         }
 
         h3 {
-            text-transform: capitalize;
             color: <?php the_field('primary_color', get_option('page')); ?>;
-            font-size: 46px;
+            font-weight: 300;
         }
 
 
         .foot-links a {
             color: <?php the_field('primary_color', get_option('page')); ?>;
-            font-size: 36px;
         }
 
         .foot-links a {
             color: <?php the_field('primary_color', get_option('page')); ?>;
-            font-size: 20px;
-            border: 2px solid <?php the_field('primary_color', get_option('page')); ?>;
-            display: inline-block;
-            padding: 12px 35px;
-            text-transform: uppercase;
-            text-decoration: none;
-            width: 250px;
         }
-
 
         #apps2 {
         <?php the_field('show_hide_1', get_option('page')); ?>;
@@ -430,6 +65,33 @@ the_post(); ?>
         <?php the_field('videography', get_option('page')); ?>;
         }
 
+        #blueimp-video-carousel{
+            margin-bottom:0;
+        }
+        p{padding-top:0;}
+        h3, p {
+            text-align: center;
+        }
+        #videography{
+            padding-bottom:0;
+            margin-bottom:40px;
+            /*height: 100vh;*/
+        }
+        .single-cmty-mgmt #masthead {
+            display: none;
+        }
+        .site {
+            max-width: none;
+        }
+        /*a:visited {color: #000000;}*/
+    </style>
+    <style type="text/css" media="screen">
+        html { margin-top: 0 !important; }
+        * html body { margin-top: 0 !important; }
+        @media screen and ( max-width: 782px ) {
+            html { margin-top: 0 !important; }
+            * html body { margin-top: 0 !important; }
+        }
     </style>
 </head>
 <body>
@@ -469,16 +131,11 @@ the_post(); ?>
                 <div class="logo-container center-sm res-wrapper">
                     <hr class="hr-sm-180 center-sm"/>
                     <h1><?php the_title(); ?></h1>
-
                     <h2><?php the_field('subheader', get_option('page')); ?></h2>
-                </div>
-                <!-- logo-container -->
-            </div>
-            <!-- container -->
-        </div>
-        <!-- header-overlay-->
-    </div>
-    <!-- row header -->
+                </div>                <!-- logo-container -->
+            </div>            <!-- container -->
+        </div>        <!-- header-overlay-->
+    </div>    <!-- row header -->
 </div>
 <div class="main container">
     <div id="top">
@@ -501,104 +158,23 @@ the_post(); ?>
     </div>
     <!-- #top -->
     <hr/>
-
-
-
-
-    <div id="photography" class="row" style="<?php the_field('photography', get_option('page')); ?>">
-
-
+    <div id="photography" class="row">
         <div class="col-sm-12">
-
-
-            <h3 class="text-center"><?php the_field('photography_title', get_option('page')); ?></h3>
-<!--            <h3 class="text-center">Photography</h3>-->
-
-
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                </ol>
-
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-
-                    <div class="item active">
-                        <img src="<?php the_field('photo_slider_01', get_option('page')); ?>" class="img-responsive">
-
-                        <div class="carousel-caption"></div>
-                    </div>
-
-                    <div class="item">
-                        <img src="<?php the_field('photo_slider_02', get_option('page')); ?>" class="img-responsive">
-                        <div class="carousel-caption"></div>
-                    </div>
-
-                    <div class="item">
-                        <img src="<?php the_field('photo_slider_03', get_option('page')); ?>" class="img-responsive">
-                        <div class="carousel-caption"></div>
-                    </div>
-                </div>
-
-                <!-- Controls -->
-
-                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+            <h3 class=""><?php the_field('photography_title', get_option('page')); ?></h3>
+            <?php the_field('photos', get_option('page')); ?>
         </div>        <!-- col-sm-12 -->
-
-    <hr style="margin-top:60px;"/>
     </div>
-    </div><!-- #photography -->
+    <hr/>
+    <!-- #photography -->
 
 
-    <div id="videography" class="row" style="<?php the_field('videography', get_option('page')); ?>">
-
+    <div id="videography" class="row">
         <div class="col-sm-12">
-
-            <h3 class="text-center"><?php the_field('videography_title', get_option('page')); ?></h3>
-            <div id="ytplayer" class="center-block"></div>
-
-            <script>
-                // Load the IFrame Player API code asynchronously.
-                var tag = document.createElement('script');
-                tag.src = "https://www.youtube.com/player_api";
-                var firstScriptTag = document.getElementsByTagName('script')[0];
-                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-                // Replace the 'ytplayer' element with an <iframe> and
-                // YouTube player after the API code downloads.
-                var player;
-                function onYouTubePlayerAPIReady() {
-                    player = new YT.Player('ytplayer', {
-//                        height: '620',
-//                        width: '100%',
-                        videoId: '<?php the_field('youtube_video_id', get_option('page')); ?>',
-                        events: {
-                            'onReady' : onPlayerReady
-                        }
-                    });
-                }
-                function onPlayerReady(event) {
-                    event.target.setPlaybackQuality('hd720');
-                }
-                function onPlayerStateChange(event) {
-                    if (event.data == YT.PlayerState.BUFFERING) {
-                        event.target.setPlaybackQuality('hd1080');
-                    }
-                }
-            </script>
-        </div>        <!-- col-sm-12 -->
-    </div>    <!-- #videography -->
-    <hr style="margin-top: 60px;<?php the_field('videography', get_option('page')); ?>"/>
+            <h3><?php the_field('videography_title', get_option('page')) ?></h3>
+            <?php the_field('videos', get_option('page')) ?>
+        </div>
+    </div>    <!-- #viphy -->
+    <hr/>
     <div id="paid-media" class="row ">
         <div class="col-sm-12">
             <?php the_field('facebook_paid_media', get_option('page')); ?>
@@ -611,14 +187,14 @@ the_post(); ?>
         <?php the_field('apps_1', get_option('page')); ?>
     </div>
     <!-- apps row -->
-    <hr style="margin-top: 60px"/>
+    <hr/>
     <div id="apps2" class="row ">
         <div class="col-sm-12">
             <?php the_field('apps_2', get_option('page')); ?>
         </div>
     </div>
     <!-- row -->
-    <hr style="margin-top: 60px"/>
+    <hr/>
     <div id="apps3" class="row">
         <div class="col-sm-12">
             <?php the_field('apps_3', get_option('page')); ?>
@@ -629,19 +205,23 @@ the_post(); ?>
 <div class="container foot-link-container">
     <div class="col-xs-12 col-sm-6 foot-links">
         <div class="col-xs-12 ">
-            <a href="http://bit.ly/1I7uFPr" target="_parent">View our work<span
-                    class="glyphicon glyphicon-menu-right icon-circle"></span></a>
+            <a href="http://wip.socialtyze.com/wp-studies/?cat=2" target="_parent">View our work
+                <!--                <span class="glyphicon glyphicon-menu-right icon-circle"></span>-->
+            </a>
         </div>
     </div>
     <div class="col-xs-12 col-sm-6 foot-links">
         <div class="col-xs-12  ">
-            <a href="mailto:angie@storycafe.com">Lets chat<span
-                    class="glyphicon glyphicon-menu-right icon-circle"></span></a>
+            <a href="mailto:hello@socialtyze.com">Lets chat
+                <!--                <span class="glyphicon glyphicon-menu-right icon-circle"></span>-->
+            </a>
         </div>
     </div>
 </div>
+
+
 <!--End Community Management Page Content -->
-<?php endwhile; ?>
+
 <!-- Site Footer -->
 <!-- This should be imported via PHP include function  -->
 <footer class="footer-main">
@@ -661,63 +241,47 @@ the_post(); ?>
                 Signup</a></li>
     </ul>
 </footer>
+<form class="newsletter" action="http://socialtyze.createsend.com/t/j/s/payhh/" method="post" style="top: 4486px; left: 1255.734375px; display: none;">
+    <p>
+        <label for="fieldName">Name</label>
+        <input id="fieldName" name="cm-name" type="text">
+    </p>
+    <p>
+        <label for="fieldEmail">Email</label>
+        <input id="fieldEmail" name="cm-payhh-payhh" type="email" required="">
+    </p>
+    <p>
+        <button class="button button-c" style="font-size: 12px; background-color: transparent; margin-top: 10px;" type="submit">Subscribe</button>
+    </p>
+</form>
+
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>-->
+
+
+<!--
 <script>
-    /**
-     * Created by adrian on 8/17/15.
-     */
-    var header, logo, yPos, windowWidth, link;
-    function yScroll() {
-        header = document.getElementById('header');
-        logo = document.getElementsByClassName("logo-sm-top");
-        link = document.getElementsByClassName("link");
-        yPos = window.pageYOffset;
-        windowWidth = window.innerWidth;
-        if(yPos > 50) {
-            header.style.height = "64px";
-            header.style.paddingTop = "10px";
-            header.style.paddingBottom = "30px";
-//            header.style.backgroundColor = "rgba(0,0,0,.8)";
-            header.style.backgroundColor = "transparent";
-            header.style.opacity = "0";
-            for( var i = 0; i < link.length; i++) {
-                link[i].style.paddingTop = "10px";
-            }
-            if(windowWidth <= 768) {
-                header.style.height = "75px";
-                header.style.paddingTop = "0px";
-                header.style.paddingBottom = "40px";
-                logo[0].style.width = "140px";
-                logo[0].style.marginTop = "10px";
+    $(function() {
+        $(".createsend-button").click(function() {
+            var $button = $(this);
+            var $form = $(".newsletter");
 
-                for( var i = 0; i < link.length; i++) {
-                    link[i].style.paddingTop = "0px";
-                    link[i].style.fontSize = "12px";
-                }
-            }
-        } else {
-            header.style.height="95px";
-            header.style.paddingTop = "40px";
-            header.style.backgroundColor = "transparent";
-            header.style.opacity = "1";
-            for( var i = 0; i < link.length; i++) {
-                link[i].style.paddingTop = "5px";
-            }
-            if(windowWidth <= 768) {
-                logo[0].style.width = "180px";
-                header.style.height="95px";
-                header.style.paddingTop = "10px";
-                for( var i = 0; i < link.length; i++) {
-                    link[i].style.fontSize = "14px";
-                    link[i].style.paddingTop = "0px";
-                }
-
-            }
-        }
-    }
-    window.addEventListener("scroll", yScroll);
+            if(!$form.is(":visible"))
+                $form.css({
+                    top: $button.offset().top - $form.outerHeight() - 15,
+                    left: $button.offset().left - ($form.outerWidth() - $button.outerWidth())/2
+                }).fadeIn(150);
+            else
+                $form.fadeOut(150);
+        });
+    });
 </script>
+-->
 
-<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<script src="<?php bloginfo('template_directory'); ?>/js/responsive-nav.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/js/bootstrap.js"></script>
+<!--<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>-->
+
+<?php endwhile; ?>
 </body>
 </html>

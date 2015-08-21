@@ -59,7 +59,7 @@ h3 {
     padding-bottom: 40px
 }
 .padding-bottom-60 {
-    padding-bottom: 50px
+    padding-bottom: 60px
 }
 .inline-block li {
     display: inline-block;
@@ -118,7 +118,7 @@ h3 {
     background-size: cover;
     height: 66vh !important;
     min-height: 556px;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
 }
 .header-overlay {
     background: rgba(0,0,0,.6);
@@ -294,6 +294,85 @@ a, a:hover {
 #top .row .col-sm-12:last-child {
     margin-bottom: 20px;
 }
+.button {
+    display: inline-block;
+    border: 2px solid #959595;
+    padding: 12px 35px;
+    text-transform: uppercase;
+    color: #959595;
+    text-decoration: none;
+}
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+.button-a {
+    color: #1687e9;
+    border-color: #1687e9;
+}
+.button-a:hover {
+    color: #459fed;
+}
+.button-b {
+    color: #1bbc9b;
+    border-color: #1bbc9b;
+}
+.button-b:hover {
+    color: #2ae0bb;
+}
+.button-c {
+    color: #fff;
+    border-color: #fff;
+}
+.button-c:hover {
+    color: white;
+}
+.newsletter {
+    background-color: #1687E9;
+    position: absolute;
+    padding: 15px 20px 20px 20px;
+    display: none;
+    text-align: center;
+}
+.newsletter p {
+    padding:0;
+    margin:0;
+}
+.newsletter input {
+    border: 0;
+    font-size: 16px;
+    font-weight: 300;
+    width: 170px;
+    height: 30px;
+}
+.newsletter label {
+    color: #fff;
+    display: block;
+    text-align: left;
+    font-size: 11px;
+    text-transform: uppercase;
+    padding-top: 0;
+    margin-bottom: 0;
+}
+.newsletter button {
+    width: 100%;
+    padding: 8px 0;
+}
+.newsletter:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 10px 10px 0;
+    border-color: #1687E9 transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    margin-left: -10px;
+    bottom: -10px;
+    left: 50%;
+}
+label {
+    font-weight:500;
+}
 /*media queries*/
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
@@ -360,19 +439,3 @@ a, a:hover {
         margin: 0;
     }
 }
-
-
-/*Videography Section*/
-/*.videoWrapper {*/
-    /*position: relative;*/
-    /*padding-bottom: 56.25%; /!* 16:9 *!/*/
-    /*padding-top: 25px;*/
-    /*height: 0;*/
-/*}*/
-/*.videoWrapper iframe {*/
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*left: 0;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-/*}*/
